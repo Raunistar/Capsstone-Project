@@ -1,0 +1,96 @@
+.maps {
+  border-radius: 5px;
+  margin: 1.3rem;
+}
+
+.location-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.2rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Location Cards */
+.email-card,
+.phone-card,
+.address-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-radius: 5px;
+  width: 25%;
+  height: auto;
+  transition: all 0.3s ease-in-out;
+  margin-top: -5rem;
+  margin-left: 2.3rem;
+}
+/* .address-card {
+  margin-left: 0;
+  margin-right: 2.3rem;
+  margin-top: 0.1rem;
+} */
+/* Icons */
+.location-cards i {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Headings */
+.location-cards h4 {
+  font-size: 1.35rem;
+  color: black;
+  font-weight: 600;
+  margin: 0.5rem;
+}
+
+/* Text */
+.location-cards p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.location-cards p:hover {
+  color: var(--primary-color);
+}
+
+.email-card:hover,
+.phone-card:hover,
+.address-card:hover {
+  margin-bottom: 1rem;
+}
+/* Responsive Design for Medium & Small Screens */
+@media (max-width: 990px) {
+  .location-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+  }
+
+  .email-card,
+  .phone-card,
+  .address-card {
+    width: 70%; /* Wider on smaller screens */
+    position: static; /* Remove absolute positioning */
+  }
+  .address-card {
+    margin-left: 2.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .email-card,
+  .phone-card,
+  .address-card {
+    width: 80%; /* Full width on very small screens */
+  }
+}

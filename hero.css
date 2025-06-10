@@ -1,0 +1,104 @@
+/* Webkit */
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track (the background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Hover effect on thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Hero Section */
+.hero {
+  padding: 1rem;
+  background-image: url(./images/AdobeStock_422946225.jpeg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100%; /* Ensures it takes full viewport height */
+  animation: slide-in 2s ease-out forwards;
+}
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-text {
+  width: 50%;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+.hero-text h2 {
+  font-size: 3.5rem;
+  color: beige;
+  font-weight: 700;
+  line-height: 4.375rem;
+  margin-bottom: 2.5rem;
+}
+.hero-text h2 em {
+  font-style: normal;
+  color: var(--primary-color);
+}
+.divider {
+  width: 5rem;
+  height: 0.4rem;
+  border-radius: 0.19rem;
+  background-color: var(--link-color);
+  margin-bottom: 2.5rem;
+}
+.hero-para {
+  color: #ffffff;
+  margin-right: 3.75rem;
+  margin-bottom: 3.125rem;
+}
+/* Media Queries for hero */
+@media (max-width: 990px) {
+  .hero {
+    padding: 4rem;
+  }
+  .hero-text {
+    width: 90%;
+    text-align: center;
+  }
+  .hero-text h2 {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .divider {
+    margin: 1rem auto;
+  }
+  .hero-text p {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .divider {
+    width: 12rem;
+  }
+}
+@media (max-width: 560px) {
+  .divider,
+  .hero-text p {
+    display: none;
+  }
+}
